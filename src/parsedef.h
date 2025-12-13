@@ -95,6 +95,8 @@ const KEYWORD   Keys[] = {
 	{"\\bf",  		PD_SETBOLD		, 0, 0},
 	{"\\rm",  		PD_SETROMAN	, 0, 0},
 	{"\\mathrm",	PD_TEXT		, 1, 0},
+	{"\\bm",		PD_BOLD		, 1, 0},
+	{"\\pmb",		PD_BOLD		, 1, 0},
 	{"^",      		PD_SUPER   	, 2, 0},
 	{"_",      		PD_SUB     	, 2, 0},
 	{"\\\\",      	PD_ENDLINE    	, 0, 0},
@@ -169,6 +171,7 @@ const KEYWORD   Keys[] = {
 	{"\\mathop",      	PD_NSPACE    	, 0, 0}, /* with libtexprintf the \limits command always works, so we ignore this */
 	{"\\mathord",      	PD_NSPACE    	, 0, 0}, /* with libtexprintf everything is ordinary! (not sure what mathord actually does...) */
 	{"\\kern",      	PD_NSPACE    	, 0, 0}, /* this I suppose I should implement at least for positive space */
+	{"\\displaystyle", 	PD_NSPACE    	, 0, 0}, /* cannot change font size */
 	// end
 	{NULL, 			PD_NONE 		, 0, 0},
 };
